@@ -56,9 +56,12 @@ There are 5 parts:
 
 ## How ```run_analysis.R``` implements the above steps:
 
-* Require ```reshapre2``` and ```data.table``` librareis.
-* Load both test and train data from the data source
-* Load the features and activity labels.
-* Process the data. There are two parts processing test and train data respectively.
-* Merge data set.
-* Extract the mean and standard deviation column names and data.
+* Require ```reshapre2``` and ```data.table``` libraries installed.
+* Download the data source
+* Load the features labels. (mean and std)
+* Load test data by merging the following files ```X_test.txt```, ```Y_test.txt``` and ```subject_test.txt```.
+* Load train data by merging the following files ```X_train.txt```, ```Y_train.txt``` and ```subject_train.txt```.
+* Merge data sets (train and test).
+* Load the activity labels by Activity_id.
+* Set the appropiate names for the variables by removing the following characters "(", ")", "-". Changing f for frec and t for time. 
+* Create a tidy set with the mean of the average of each variable for each activity and each subject.
