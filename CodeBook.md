@@ -63,5 +63,5 @@ There are 5 parts:
 * Load train data by merging the following files ```X_train.txt```, ```Y_train.txt``` and ```subject_train.txt```.
 * Merge data sets (train and test).
 * Load the activity labels by Activity_id.
-* Set the appropiate names for the variables by removing the following characters "(", ")", "-". Changing f for frec and t for time. 
+* Correct the variables names for a better understanding of they by removing the following characters "(", ")", "-". Changing f --> frec (frecuency) and t --> time. And also capitol letter in mean and std for distinguish the start of the word.
 * Create a tidy set with the mean of the average of each variable for each activity and each subject.
