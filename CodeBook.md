@@ -43,25 +43,8 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
+# The variables 
+- **Subject:** is the variable for distinguish the people who did the experiment.
+- **Activity_label:** is the name of the activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+- **Other variables:** are described into the file features_info.txt which is in the data source.
 
-## Transformation details
-
-There are 5 parts:
-
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive activity names.
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-## How ```run_analysis.R``` implements the above steps:
-
-* Require ```reshapre2``` and ```data.table``` libraries installed.
-* Download the data source
-* Load the features labels. (mean and std)
-* Load test data by merging the following files ```X_test.txt```, ```Y_test.txt``` and ```subject_test.txt```.
-* Load train data by merging the following files ```X_train.txt```, ```Y_train.txt``` and ```subject_train.txt```.
-* Merge data sets (train and test).
-* Load the activity labels by Activity_id.
-* Correct the variables names for a better understanding of they by removing the following characters "(", ")", "-". Changing f --> frec (frecuency) and t --> time. And also capitol letter in mean and std for distinguish the start of the word.
-* Create a tidy set with the mean of the average of each variable for each activity and each subject.
